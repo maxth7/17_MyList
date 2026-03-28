@@ -1,5 +1,3 @@
-¬изуальна€ проверка на кр€коз€блы
-
 Serialization and deserialization of a doubly linked list with arbitrary links
 ==============================================================================
 The input file :     inlet.in
