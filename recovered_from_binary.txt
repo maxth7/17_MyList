@@ -1,0 +1,6 @@
+a	pple;2
+b
+a
+nana;-1
+c
+arrot;2

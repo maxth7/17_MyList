@@ -1,0 +1,58 @@
+¬изуальна€ проверка на кр€коз€блы
+
+Serialization and deserialization of a doubly linked list with arbitrary links
+==============================================================================
+The input file :     inlet.in
+The output file:     outlet.out
+Restored from outlet.out the output file: recovered_from_binary.txt
+
+Step 1. Parsing: readinginlet.in and creating list nodes in memory.
+=============================================================================
+      [Step 1/3] Loading data from a text file inlet.in
+A text loader is being used
+Successful data loading from a text file
+------------------------------------------------------
+      [Step 2/3]. Building connections and displaying the list in the console
+------------------------------------------------------
+”зел 0: rand -> узел 2
+Node 1: rand = null
+”зел 2: rand -> узел 2
+------------------------------------------------------
+Statistics:
+    Total nodes: 3
+    Total amount of data: 24 байт
+    Max. line length: 10 байт
+    Nodes with rand: 2
+      [Step 4/4]. Serialization: saving a list from memory to a binary file outlet.out
+Serialized nodes:3 to file outlet.out
+Serialization is successfully complete.
+------------------------------------------------------
+
+Step 2. Deserialization and export.
+==========================================================================
+      Step [1/2]. Loading data from a binary file outlet.out
+Binary bootloader is used
+------------------------------------------------------
+The deserialization was successful.
+      Step [2/3]. Output to console:
+Contents of the list:
+---------------------
+Node 0: data="a\tpple", prev=null, next=1, rand=2
+Node 1: data="b\r\na\r\nnana", prev=0, next=2, rand=null
+Node 2: data="c\r\narrot", prev=1, next=null, rand=2
+---------------------
+      Step [3/3]. Saving to the input file in text format inlet.in: recovered_from_binary.txt
+Data has been successfully saved in the input file format  inlet.in: recovered_from_binary.txt
+
+STEP 3: Comparing files.
+=========================================================================
+---------------------------------------
+|The size of the source file:  35 байт|
+|The size of the restored:     35 байт|
+---------------------------------------
+File sizes  "inlet.in" and  "recovered_from_binary.txt"  are the same
+2 files have been created:
+      1. outlet.out (binary serialization)
+      2. recovered_from_binary.txt (restored text format)
+The program has been successfully completed.
+==========================================================================
