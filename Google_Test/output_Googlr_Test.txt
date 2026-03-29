@@ -1,0 +1,48 @@
+[==========] Running 7 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 7 tests from ListDataConverterTest
+[ RUN      ] ListDataConverterTest.LoadValidTextFile
+
+Test 1. Successful loading of correct data
+A text loader is used
+[       OK ] ListDataConverterTest.LoadValidTextFile (1 ms)
+[ RUN      ] ListDataConverterTest.ExceedMaxNodesLimit
+
+Test 2. Exceeding the node limit
+A text loader is used
+The node limit has been reached: 1000000
+[       OK ] ListDataConverterTest.ExceedMaxNodesLimit (3911 ms)
+[ RUN      ] ListDataConverterTest.ExceedMaxDataLength
+
+Test 3. Exceeding the maximum data length
+A text loader is used
+Error: The maximum data length (1000)  in the string has been exceeded.1 Length: 1010
+[       OK ] ListDataConverterTest.ExceedMaxDataLength (2 ms)
+[ RUN      ] ListDataConverterTest.ParseIndexError01
+
+Test 4. Index parsing error. Invalid index=<valid_data; invalid_index
+>
+A text loader is used
+Error: rand_index parsing error
+[       OK ] ListDataConverterTest.ParseIndexError01 (2 ms)
+[ RUN      ] ListDataConverterTest.ParseIndexError02
+
+Test 5. Index parsing error. Invalid input string=< a; pple; 2>
+A text loader is used
+Error: rand_index parsing error
+[       OK ] ListDataConverterTest.ParseIndexError02 (2 ms)
+[ RUN      ] ListDataConverterTest.EmptyFile
+
+Test 6. Empty file
+A text loader is used
+[       OK ] ListDataConverterTest.EmptyFile (1 ms)
+[ RUN      ] ListDataConverterTest.SingleLineFile
+
+Test 7. A file with a single line
+A text loader is used
+[       OK ] ListDataConverterTest.SingleLineFile (0 ms)
+[----------] 7 tests from ListDataConverterTest (3933 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test case ran. (3938 ms total)
+[  PASSED  ] 7 tests.
