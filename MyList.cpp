@@ -124,11 +124,12 @@ int main(int argc, char* argv[]) {
         std::streamsize original_size = original.tellg();
         std::streamsize reconstructed_size = reconstructed.tellg();
 
-        std::cout << "---------------------------------------" << std::endl;
+        std::cout << "----------------------------------------" << std::endl;
 
-        std::cout << "|The size of the source file:  " << original_size << " байт|" << std::endl;
-        std::cout << "|The size of the restored:     " << reconstructed_size << " байт|" << std::endl;
-        std::cout << "---------------------------------------" << std::endl;
+        std::cout << "|The size of the source file:  " << original_size << " bytes|" << std::endl;
+        std::cout << "|The size of the restored:     " << reconstructed_size << " bytes|" << std::endl;
+        std::cout << "----------------------------------------" << std::endl;
+
 
         if (original_size == reconstructed_size) {
             std::cout << "File sizes  \"" << input_file
