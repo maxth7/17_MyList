@@ -64,7 +64,7 @@ std::string ListDataConverter::escapeSpecialChars(const std::string& s) {
         // 1. 1. Open the file (same for all formats)
         std::ifstream file(filename, std::ios::binary);
         if (!file.is_open()) {
-            std::cerr << "Error: couldn't open the file" << filename << std::endl;
+            std::cerr << "Error: couldn't open the file " << filename << std::endl;
             return false;
         }
 
@@ -360,7 +360,7 @@ std::string ListDataConverter::escapeSpecialChars(const std::string& s) {
             // control of the maximum number in rand
             if (idx >= 0 && idx < static_cast<int>(nodes.size())) {
                 nodes[i]->rand = nodes[idx].get();
-                std::cout << "Узел " << i << ": rand -> узел " << idx << std::endl;
+                std::cout << "Node " << i << ": rand -> Node " << idx << std::endl;
             }
             else if (idx == -1) {
                 nodes[i]->rand = nullptr;
@@ -383,7 +383,7 @@ std::string ListDataConverter::escapeSpecialChars(const std::string& s) {
         if (nodes.empty()) {
             std::cout << "    The list is empty" << std::endl;
             std::cout << "    Total nodes: 0" << std::endl;
-            std::cout << "    Total amount of data: 0 байт" << std::endl;
+            std::cout << "    Total amount of data: 0 bytes" << std::endl;
             std::cout << "    Max.line length : 0 bytes" << std::endl;
             
             return;
@@ -402,8 +402,8 @@ std::string ListDataConverter::escapeSpecialChars(const std::string& s) {
 
         }
 
-        std::cout << "    Total amount of data: " << total_data_size << " байт" << std::endl;
-        std::cout << "    Max. line length: " << max_data_size << " байт" << std::endl;
+        std::cout << "    Total amount of data: " << total_data_size << " bytes" << std::endl;
+        std::cout << "    Max. line length: " << max_data_size << " bytes" << std::endl;
         std::cout << "    Nodes with rand: " << rand_count << std::endl;
        
     }
