@@ -12,14 +12,14 @@ Successful data loading from a text file
 ------------------------------------------------------
       [Step 2/3]. Building connections and displaying the list in the console
 ------------------------------------------------------
-”зел 0: rand -> узел 2
+Node 0: rand -> Node 2
 Node 1: rand = null
-”зел 2: rand -> узел 2
+Node 2: rand -> Node 2
 ------------------------------------------------------
 Statistics:
     Total nodes: 3
-    Total amount of data: 24 байт
-    Max. line length: 10 байт
+    Total amount of data: 24 bytes
+    Max. line length: 10 bytes
     Nodes with rand: 2
       [Step 4/4]. Serialization: saving a list from memory to a binary file outlet.out
 Serialized nodes:3 to file outlet.out
@@ -45,8 +45,8 @@ Data has been successfully saved in the input file format  inlet.in: recovered_f
 STEP 3: Comparing files.
 =========================================================================
 ---------------------------------------
-|The size of the source file:  35 байт|
-|The size of the restored:     35 байт|
+|The size of the source file:  35 bytes|
+|The size of the restored:     35 bytes|
 ---------------------------------------
 File sizes  "inlet.in" and  "recovered_from_binary.txt"  are the same
 2 files have been created:
